@@ -1,0 +1,92 @@
+/* Body styles */
+body {
+    background-color: #fafafa;
+    padding-top: 54px;
+}
+
+/* Navbar styles */
+.navbar {
+    height: 54px;
+}
+
+.logo {
+    margin-left: 192px;
+}
+
+.search {
+    background-color: #fafafa;
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    color: #262626;
+    outline: none;
+    padding: 3px 10px 3px 26px;
+    width: 215px;
+    height: 28px;
+    font-size: 14px;
+    z-index: 2;
+}
+
+.search::placeholder {
+    background-image: url('assets/search-solid.svg');
+    background-repeat: no-repeat;
+    background-position: 8px center;
+    background-size: 10px;
+    color: #8e8e8e;
+    font-size: 14px;
+}
+
+/* Middle area styles */
+.middlearea {
+    max-height: 200px !important;
+}
+
+.story-area {
+    overflow-x: auto;
+}
+
+.story-area::-webkit-scrollbar {
+    display: none;
+}
+
+.story-item {
+    margin-right: 1rem;
+}
+
+/* Post styles */
+.action-buttons i {
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+/* Right panel styles */
+.rightpanel {
+    background-color: white;
+    border: none;
+    position: sticky;
+    top: 70px;
+}
+
+/* Sticky sidebar */
+.stickysidebar {
+    position: sticky;
+    top: 70px;
+}
+
+/* Make text align right for specific elements */
+.card-footer button,
+.suggestions a {
+    text-align: right;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .logo {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .middlearea {
+        margin-right: 2rem;
+    }
+}
