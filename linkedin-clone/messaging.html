@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mesajlaşma | LinkedIn Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+        <div class="container">
+            <a class="navbar-brand ms-3" href="index.html">
+                <i class="fab fa-linkedin fa-2x text-primary"></i>
+            </a>
+            <div class="search-box me-3">
+                <input type="text" class="form-control" placeholder="Mesajlarda Ara">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home fa-lg d-block"></i>
+                            Ana Sayfa
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="network.html">
+                            <i class="fas fa-user-friends fa-lg d-block"></i>
+                            Ağım
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jobs.html">
+                            <i class="fas fa-briefcase fa-lg d-block"></i>
+                            İş İlanları
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="messaging.html">
+                            <i class="fas fa-comment-dots fa-lg d-block"></i>
+                            Mesajlaşma
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="notifications.html">
+                            <i class="fas fa-bell fa-lg d-block"></i>
+                            Bildirimler
+                        </a>
+                    </li>
+                    <li class="nav-item profile-dropdown">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://picsum.photos/id/237/200/200" class="rounded-circle profile-image" alt="profile">
+                            Ben
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div class="row g-3">
+            <!-- Left Sidebar - Message List -->
+            <div class="col-12 col-md-4">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
+                        <h5 class="mb-0 fw-bold">Mesajlaşma</h5>
+                        <div>
+                            <button class="btn btn-light rounded-circle me-2" title="Diğer Seçenekler">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                            <button class="btn btn-light rounded-circle" title="Yeni Mesaj">
+                                <i class="fas fa-edit"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="list-group list-group-flush">
+                            <a href="#" class="list-group-item list-group-item-action active py-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/id/64/50/50" class="rounded-circle me-3" alt="profile" style="width: 48px; height: 48px; object-fit: cover;">
+                                        <span class="position-absolute bottom-0 end-0 bg-success rounded-circle" style="width: 12px; height: 12px; border: 2px solid white;"></span>
+                                    </div>
+                                    <div class="flex-grow-1 min-width-0">
+                                        <h6 class="mb-1 text-truncate">Ahmet Yılmaz</h6>
+                                        <p class="mb-1 small text-truncate">Son mesaj: Merhaba, projeyle ilgili...</p>
+                                        <small class="text-muted">2 saat önce</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action py-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/id/65/50/50" class="rounded-circle me-3" alt="profile" style="width: 48px; height: 48px; object-fit: cover;">
+                                        <span class="position-absolute bottom-0 end-0 bg-secondary rounded-circle" style="width: 12px; height: 12px; border: 2px solid white;"></span>
+                                    </div>
+                                    <div class="flex-grow-1 min-width-0">
+                                        <h6 class="mb-1 text-truncate">Ayşe Demir</h6>
+                                        <p class="mb-1 small text-truncate">Son mesaj: Toplantı için uygun...</p>
+                                        <small class="text-muted">5 saat önce</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#" class="list-group-item list-group-item-action py-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="position-relative">
+                                        <img src="https://picsum.photos/id/66/50/50" class="rounded-circle me-3" alt="profile" style="width: 48px; height: 48px; object-fit: cover;">
+                                        <span class="position-absolute bottom-0 end-0 bg-secondary rounded-circle" style="width: 12px; height: 12px; border: 2px solid white;"></span>
+                                    </div>
+                                    <div class="flex-grow-1 min-width-0">
+                                        <h6 class="mb-1 text-truncate">Mehmet Kaya</h6>
+                                        <p class="mb-1 small text-truncate">Son mesaj: İş başvurunuz hakkında...</p>
+                                        <small class="text-muted">1 gün önce</small>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content - Chat Window -->
+            <div class="col-12 col-md-8">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white py-3">
+                        <div class="d-flex align-items-center">
+                            <div class="position-relative">
+                                <img src="https://picsum.photos/id/64/50/50" class="rounded-circle me-3" alt="profile" style="width: 48px; height: 48px; object-fit: cover;">
+                                <span class="position-absolute bottom-0 end-0 bg-success rounded-circle" style="width: 12px; height: 12px; border: 2px solid white;"></span>
+                            </div>
+                            <div>
+                                <h6 class="mb-0 fw-bold">Ahmet Yılmaz</h6>
+                                <small class="text-muted">Software Developer at Tech Company</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body bg-light" style="height: 500px; overflow-y: auto;">
+                        <!-- Messages -->
+                        <div class="d-flex mb-4">
+                            <div class="position-relative me-2">
+                                <img src="https://picsum.photos/id/64/40/40" class="rounded-circle" alt="profile" style="width: 40px; height: 40px; object-fit: cover;">
+                            </div>
+                            <div class="bg-white rounded-3 p-3 shadow-sm" style="max-width: 75%;">
+                                <p class="mb-1">Merhaba, projeyle ilgili görüşmek ister misiniz?</p>
+                                <small class="text-muted">14:30</small>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row-reverse mb-4">
+                            <div class="position-relative ms-2">
+                                <img src="https://picsum.photos/id/237/40/40" class="rounded-circle" alt="profile" style="width: 40px; height: 40px; object-fit: cover;">
+                            </div>
+                            <div class="bg-primary text-white rounded-3 p-3 shadow-sm" style="max-width: 75%;">
+                                <p class="mb-1">Elbette, yarın öğleden sonra müsait misiniz?</p>
+                                <small class="text-white-50">14:35</small>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-4">
+                            <div class="position-relative me-2">
+                                <img src="https://picsum.photos/id/64/40/40" class="rounded-circle" alt="profile" style="width: 40px; height: 40px; object-fit: cover;">
+                            </div>
+                            <div class="bg-white rounded-3 p-3 shadow-sm" style="max-width: 75%;">
+                                <p class="mb-1">Evet, saat 14:00'te görüşebiliriz.</p>
+                                <small class="text-muted">14:40</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-white p-3">
+                        <div class="input-group">
+                            <button class="btn btn-light border" title="Fotoğraf Ekle">
+                                <i class="fas fa-image"></i>
+                            </button>
+                            <button class="btn btn-light border" title="Dosya Ekle">
+                                <i class="fas fa-paperclip"></i>
+                            </button>
+                            <input type="text" class="form-control border" placeholder="Bir mesaj yazın...">
+                            <button class="btn btn-primary px-4">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

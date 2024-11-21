@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil | LinkedIn Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar will be included via JavaScript -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+    <div class="container">
+        <a class="navbar-brand ms-3" href="index.html">
+            <i class="fab fa-linkedin fa-2x text-primary"></i>
+        </a>
+        <div class="search-box me-3">
+            <input type="text" class="form-control" placeholder="Arama Yap">
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-home fa-lg d-block"></i>
+                        Ana Sayfa
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="network.html">
+                        <i class="fas fa-user-friends fa-lg d-block"></i>
+                        Ağım
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-briefcase fa-lg d-block"></i>
+                        İş İlanları
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-comment-dots fa-lg d-block"></i>
+                        Mesajlaşma
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-bell fa-lg d-block"></i>
+                        Bildirimler
+                    </a>
+                </li>
+                <li class="nav-item profile-dropdown">
+                    <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="https://picsum.photos/id/237/200/200" class="rounded-circle profile-image" alt="profile">
+                        Ben
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Profile Header -->
+    <div class="container main-content">
+        <div class="card mb-3">
+            <div class="card-body profile-header">
+                <div class="profile-cover">
+                    <img src="https://picsum.photos/1200/300" alt="cover" class="w-100 profile-cover-img">
+                    <div class="profile-photo-container">
+                        <img src="https://picsum.photos/id/237/200/200" alt="profile" class="profile-photo-large">
+                    </div>
+                </div>
+                <div class="profile-info mt-5">
+                    <h2>Kullanıcı Adı</h2>
+                    <h4 class="text-muted">Yazılım Geliştirici</h4>
+                    <p class="text-muted">İstanbul, Türkiye · <a href="#" class="text-primary">500+ bağlantı</a></p>
+                    <div class="profile-actions mt-3">
+                        <button class="btn btn-primary rounded-pill"><i class="fas fa-plus"></i> Takip Et</button>
+                        <button class="btn btn-outline-primary rounded-pill"><i class="fas fa-envelope"></i> Mesaj</button>
+                        <button class="btn btn-outline-secondary rounded-pill">Diğer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <!-- About Section -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Hakkında</h5>
+                        <p>Yazılım geliştirme konusunda tutkulu ve deneyimli. Full-stack web development, mobil uygulama geliştirme ve yapay zeka alanlarında çalışmalar yapıyorum.</p>
+                    </div>
+                </div>
+
+                <!-- Experience Section -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Deneyim</h5>
+                        <div class="experience-item d-flex mb-3">
+                            <img src="https://picsum.photos/id/28/48/48" alt="company" class="company-logo me-3">
+                            <div>
+                                <h6>Kıdemli Yazılım Geliştirici</h6>
+                                <p class="text-muted mb-1">Tech Company · Tam zamanlı</p>
+                                <p class="text-muted">Oca 2020 - Günümüz · 3 yıl</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Section -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Eğitim</h5>
+                        <div class="education-item d-flex mb-3">
+                            <img src="https://picsum.photos/id/42/48/48" alt="university" class="university-logo me-3">
+                            <div>
+                                <h6>Bilgisayar Mühendisliği</h6>
+                                <p class="text-muted mb-1">Üniversite Adı</p>
+                                <p class="text-muted">2016 - 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <!-- Skills Section -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Yetenekler</h5>
+                        <div class="skill-item mb-2">
+                            <span class="skill-name">JavaScript</span>
+                            <span class="badge bg-primary">Onaylandı</span>
+                        </div>
+                        <div class="skill-item mb-2">
+                            <span class="skill-name">Python</span>
+                            <span class="badge bg-primary">Onaylandı</span>
+                        </div>
+                        <div class="skill-item mb-2">
+                            <span class="skill-name">React.js</span>
+                            <span class="badge bg-primary">Onaylandı</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages Section -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Diller</h5>
+                        <div class="language-item mb-2">
+                            <span class="language-name">Türkçe</span>
+                            <small class="text-muted">· Ana dil</small>
+                        </div>
+                        <div class="language-item mb-2">
+                            <span class="language-name">İngilizce</span>
+                            <small class="text-muted">· İleri seviye</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Messaging panel will be included via JavaScript -->
+    <div id="messaging-placeholder"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

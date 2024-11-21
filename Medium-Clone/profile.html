@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Medium Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar (Same as dashboard.html) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Medium Clone</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="write.html">Write</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center">
+                    <div class="notifications-icon me-3 position-relative">
+                        <i class="fas fa-bell fs-5" data-bs-toggle="dropdown"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger notification-badge" style="display: none;">
+                            0
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end notifications-dropdown">
+                            <div class="notifications-list p-2">
+                                <div class="text-center text-muted">No new notifications</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <img src="" alt="Profile" class="rounded-circle me-2 user-avatar" style="width: 32px; height: 32px;" data-bs-toggle="dropdown">
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="dashboard.html">Dashboard</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#" onclick="signOut()">Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Content -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <!-- Profile Card -->
+                <div class="card">
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <img src="" alt="Profile Picture" class="rounded-circle user-avatar" style="width: 150px; height: 150px;">
+                            <button class="btn btn-sm btn-outline-dark mt-2" onclick="document.getElementById('avatarUpload').click()">
+                                Change Photo
+                            </button>
+                            <input type="file" id="avatarUpload" hidden accept="image/*">
+                        </div>
+                        <h4 id="profileName"></h4>
+                        <p class="text-muted" id="profileEmail"></p>
+                        <p class="mb-2"><span id="articleCount">0</span> articles published</p>
+                        <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#editProfileModal">
+                            Edit Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <!-- Bio Section -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">About</h5>
+                        <p id="userBio" class="card-text">No bio added yet.</p>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Recent Activity</h5>
+                        <div id="recentActivity">
+                            <!-- Activity items will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Profile Modal -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Profile</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="editProfileForm">
+                        <div class="mb-3">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="editName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="editEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Bio</label>
+                            <textarea class="form-control" id="editBio" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">New Password (leave blank to keep current)</label>
+                            <input type="password" class="form-control" id="editPassword">
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notificationToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="fas fa-bell me-2"></i>
+                <strong class="me-auto">New Notification</strong>
+                <small class="text-muted">just now</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                <!-- Notification message will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

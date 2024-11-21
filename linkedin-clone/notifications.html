@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bildirimler | LinkedIn Clone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom fixed-top">
+        <div class="container">
+            <a class="navbar-brand ms-3" href="index.html">
+                <i class="fab fa-linkedin fa-2x text-primary"></i>
+            </a>
+            <div class="search-box me-3">
+                <input type="text" class="form-control" placeholder="Arama Yap">
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home fa-lg d-block"></i>
+                            Ana Sayfa
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="network.html">
+                            <i class="fas fa-user-friends fa-lg d-block"></i>
+                            Ağım
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="jobs.html">
+                            <i class="fas fa-briefcase fa-lg d-block"></i>
+                            İş İlanları
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="messaging.html">
+                            <i class="fas fa-comment-dots fa-lg d-block"></i>
+                            Mesajlaşma
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="notifications.html">
+                            <i class="fas fa-bell fa-lg d-block"></i>
+                            Bildirimler
+                        </a>
+                    </li>
+                    <li class="nav-item profile-dropdown">
+                        <a class="nav-link" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://picsum.photos/id/237/200/200" class="rounded-circle profile-image" alt="profile">
+                            Ben
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Settings</a></li>
+                            <li><a class="dropdown-item" href="#">Log Out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container main-content">
+        <div class="row">
+            <!-- Main Content -->
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Bildirimler</h5>
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Filtrele
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Tüm Bildirimler</a></li>
+                                <li><a class="dropdown-item" href="#">Okunmamış</a></li>
+                                <li><a class="dropdown-item" href="#">Bağlantılar</a></li>
+                                <li><a class="dropdown-item" href="#">Paylaşımlar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <!-- Today's Notifications -->
+                        <h6 class="text-muted mb-3">Bugün</h6>
+                        <div class="notification-item d-flex align-items-center mb-3 p-3 bg-light rounded">
+                            <img src="https://picsum.photos/id/64/50/50" class="rounded-circle me-3" alt="profile">
+                            <div class="flex-grow-1">
+                                <p class="mb-1"><strong>Ahmet Yılmaz</strong> gönderinizi beğendi</p>
+                                <small class="text-muted">2 saat önce</small>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Bildirimi Kaldır</a></li>
+                                    <li><a class="dropdown-item" href="#">Bildirim Ayarları</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="notification-item d-flex align-items-center mb-3 p-3 bg-light rounded">
+                            <img src="https://picsum.photos/id/65/50/50" class="rounded-circle me-3" alt="profile">
+                            <div class="flex-grow-1">
+                                <p class="mb-1"><strong>Ayşe Demir</strong> yeni bir gönderi paylaştı</p>
+                                <small class="text-muted">4 saat önce</small>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Bildirimi Kaldır</a></li>
+                                    <li><a class="dropdown-item" href="#">Bildirim Ayarları</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Yesterday's Notifications -->
+                        <h6 class="text-muted mb-3 mt-4">Dün</h6>
+                        <div class="notification-item d-flex align-items-center mb-3 p-3 bg-light rounded">
+                            <img src="https://picsum.photos/id/66/50/50" class="rounded-circle me-3" alt="profile">
+                            <div class="flex-grow-1">
+                                <p class="mb-1"><strong>Mehmet Kaya</strong> size bağlantı isteği gönderdi</p>
+                                <small class="text-muted">1 gün önce</small>
+                                <div class="mt-2">
+                                    <button class="btn btn-primary btn-sm me-2">Kabul Et</button>
+                                    <button class="btn btn-outline-secondary btn-sm">Yok Say</button>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                                <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Bildirimi Kaldır</a></li>
+                                    <li><a class="dropdown-item" href="#">Bildirim Ayarları</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Bildirim Ayarları</h5>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="pushNotifications" checked>
+                            <label class="form-check-label" for="pushNotifications">
+                                Push Bildirimleri
+                            </label>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                            <label class="form-check-label" for="emailNotifications">
+                                E-posta Bildirimleri
+                            </label>
+                        </div>
+                        <div class="form-check form-switch mb-3">
+                            <input class="form-check-input" type="checkbox" id="networkNotifications" checked>
+                            <label class="form-check-label" for="networkNotifications">
+                                Ağ Bildirimleri
+                            </label>
+                        </div>
+                        <button class="btn btn-outline-primary w-100">
+                            Tüm Ayarları Yönet
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
